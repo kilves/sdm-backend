@@ -160,7 +160,7 @@ def _internal_tagpt(force_json=False):
         res = validate_plain_sun(uid=uid,
                                  read_ctr=read_ctr,
                                  sdmmac=cmac,
-                                 sdm_file_read_key=sdm_file_read_key)
+                                 sdm_file_read_key=MASTER_KEY)
     except InvalidMessage:
         raise BadRequest("Invalid message (most probably wrong signature).") from None
 
